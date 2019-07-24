@@ -14,4 +14,6 @@ public interface MuzixService {
 
     public Muzix updateMuzix(Muzix muzix);
 
+    public List<Muzix> getTrackByName(String name);
+
 }

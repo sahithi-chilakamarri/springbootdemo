@@ -57,5 +57,12 @@ public class MuzixServiceImpl implements MuzixService {
             return muzix;
         }
     }
+    //Tracking the data by name
+    @Override
+    public List<Muzix> getTrackByName(String name) {
+        Muzix muzix=new Muzix();
+        muzix.setName(name);
+        return muzixRepository.trackByName(muzix.getName());
+    }
 }
 

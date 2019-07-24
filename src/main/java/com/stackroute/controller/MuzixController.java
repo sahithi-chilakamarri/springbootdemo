@@ -44,9 +44,14 @@ public class MuzixController {
         return new ResponseEntity<Boolean>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
     }
 
-    //Updiatng the track
+    //Updating the track
     @PostMapping("update")
     public ResponseEntity<?> updateMuzix(@RequestBody Muzix muzix) {
         return new ResponseEntity<>(muzixService.updateMuzix(muzix), HttpStatus.OK);
+    }
+    //Retrieving data by name
+    @PostMapping("trackByName")
+    public ResponseEntity<?> trackByNames(@RequestBody Muzix muzix){
+        return new ResponseEntity<>(muzixService.getTrackByName(muzix.getName()),HttpStatus.OK);
     }
 }
