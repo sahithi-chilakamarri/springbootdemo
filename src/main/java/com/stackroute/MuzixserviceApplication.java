@@ -11,4 +11,5 @@ public class MuzixserviceApplication {
 		SpringApplication.run(MuzixserviceApplication.class, args);
 	}
 
+
 }

@@ -12,6 +12,7 @@ public class Muzix {
     private String name;
     private String track;
 
+
     //Default and parameterized constructors
     public Muzix() {
     }

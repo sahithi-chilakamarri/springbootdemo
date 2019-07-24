@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 //Repository which extends the Jpa Repository
 @Repository
 public interface MuzixRepository extends JpaRepository<Muzix,Integer> {
-
 }
