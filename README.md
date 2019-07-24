@@ -1,2 +1,2 @@
 # springbootdemo
-1. Complete all the endpoints for CRUD operations on Muzix
+4. Generate API documentation using Swagger 2
