@@ -6,6 +6,7 @@ import javax.persistence.Id;
 //Maps to the muzix class
 @Entity
 public class Muzix {
+
     //PrimaryKey in the table
     @Id
     private int id;

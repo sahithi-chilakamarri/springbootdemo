@@ -1,6 +1,8 @@
 package com.stackroute.serivce;
 
 import com.stackroute.domain.Muzix;
+import com.stackroute.exception.TrackAlreadyExistsException;
+import com.stackroute.exception.TrackNotFoundException;
 import com.stackroute.repository.MuzixRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,9 +23,14 @@ public class MuzixServiceImpl implements MuzixService {
 
     //creating the track
     @Override
-    public Muzix saveMuzix(Muzix muzix) {
+    public Muzix saveMuzix(Muzix muzix) throws TrackAlreadyExistsException{
 
+        if(muzixRepository.existsById(muzix.getId()))
+        {
+            throw new TrackAlreadyExistsException("Track already exists");
+        }
         return muzixRepository.save(muzix);
+
     }
 
     //retrieving all the tracks
@@ -34,7 +41,11 @@ public class MuzixServiceImpl implements MuzixService {
 
     //Deleting the track
     @Override
-    public boolean deleteMuzix(int id) {
+    public boolean deleteMuzix(int id) throws TrackNotFoundException{
+        if(!muzixRepository.existsById(id))
+        {
+            throw new TrackNotFoundException("Track not found");
+        }
         muzixRepository.deleteById(id);
         return true;
     }
