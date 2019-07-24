@@ -35,13 +35,13 @@ public class MuzixController {
     }
 
     //Retrieving all the tracks
-    @GetMapping("allmuzix")
+    @GetMapping("muzix")
     public ResponseEntity<?> getAllMuzix() {
         return new ResponseEntity(muzixService.getAllMuzics(), HttpStatus.OK);
     }
 
     //Deleting the track
-    @PostMapping("delete")
+    @DeleteMapping("muzix")
     public ResponseEntity<?> deleteMuzix(@RequestBody Muzix muzix) {
 
         ResponseEntity responseEntity;
@@ -56,7 +56,7 @@ public class MuzixController {
     }
 
     //Updiatng the track
-    @PostMapping("update")
+    @PutMapping("muzix")
     public ResponseEntity<?> updateMuzix(@RequestBody Muzix muzix) {
         return new ResponseEntity<>(muzixService.updateMuzix(muzix), HttpStatus.OK);
     }
