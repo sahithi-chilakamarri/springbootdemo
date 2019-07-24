@@ -38,14 +38,14 @@ public class MuzixController {
     }
 
     //Deleting the track
-    @PostMapping("delete")
+    @DeleteMapping("muzix")
     public ResponseEntity<?> deleteMuzix(@RequestBody Muzix muzix) {
 
         return new ResponseEntity<Boolean>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
     }
 
     //Updiatng the track
-    @PostMapping("update")
+    @PutMapping("muzix")
     public ResponseEntity<?> updateMuzix(@RequestBody Muzix muzix) {
         return new ResponseEntity<>(muzixService.updateMuzix(muzix), HttpStatus.OK);
     }
