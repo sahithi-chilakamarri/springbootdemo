@@ -9,6 +9,7 @@ package com.stackroute.exception;
         }
         public TrackAlreadyExistsException(String message)
         {
+            //Calling the super class constructor
             super(message);
             this.message=message;
         }
