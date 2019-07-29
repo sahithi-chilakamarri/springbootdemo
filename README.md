@@ -33,5 +33,6 @@ novice expert Internet users.
 
 6 Tools and technologies
 to be used
-
-To Be Decided
+MySQL Database
+SpringBoot
+Tomcat Server
