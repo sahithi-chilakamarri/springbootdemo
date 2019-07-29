@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
+//To create the muzix table
 @Entity
 @Data
 @NoArgsConstructor
