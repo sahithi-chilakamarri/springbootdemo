@@ -1,6 +1,8 @@
 # springbootassignment
 Muzix Application Case Study
 
+Spring boot assignment using mysql database
+
 1 Name of Project Muzix Application
 
 2 Objective/Vision This is an online application that helps users manage music
