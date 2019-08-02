@@ -13,7 +13,7 @@ public class MuzixController {
     //Creating object for the muzix service
     MuzixService muzixService;
 
-    //Constructor
+    //parameterized Constructor
     public MuzixController(MuzixService muzixService) {
         this.muzixService = muzixService;
     }
@@ -22,6 +22,7 @@ public class MuzixController {
     @PostMapping("muzix")
     public ResponseEntity<?> saveMuzix(@RequestBody Muzix muzix) {
         ResponseEntity responseEntity;
+        //calling the saveMuzix() in service
         try {
             muzixService.saveMuzix(muzix);
             responseEntity = new ResponseEntity("successfully created", HttpStatus.CREATED);
@@ -34,19 +35,21 @@ public class MuzixController {
     //Retrieving all the tracks
     @GetMapping("muzix")
     public ResponseEntity<?> getAllMuzix() {
+         //calling the getAllMuzix() in service
         return new ResponseEntity(muzixService.getAllMuzics(), HttpStatus.OK);
     }
 
     //Deleting the track
     @DeleteMapping("muzix")
     public ResponseEntity<?> deleteMuzix(@RequestBody Muzix muzix) {
-
+     //calling the deleteMuzix() in service
         return new ResponseEntity<Boolean>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
     }
 
     //Updiatng the track
     @PutMapping("muzix")
     public ResponseEntity<?> updateMuzix(@RequestBody Muzix muzix) {
+         //calling the updateMuzix() in service
         return new ResponseEntity<>(muzixService.updateMuzix(muzix), HttpStatus.OK);
     }
 }
