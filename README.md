@@ -1,3 +1,8 @@
 # springbootdemo
-3. Add an endpoint to search trackByName. Understand @Query and parameter passing to
-@Query
+In this branch
+
+
+Added an endpoint to search trackByName.
+
+
+Used @Query annotation to pass the query
