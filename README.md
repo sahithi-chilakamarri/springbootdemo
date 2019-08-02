@@ -1,4 +1,7 @@
 # springbootdemo
-5. Create custom exceptions TrackNotFoundException, TrackAlreadyExistsException in a
-com.stack....exceptions package. Perform appropriate exception handling and propagation
-Back.
+In this branch
+
+
+
+Created custom exceptions like TrackNotFoundException, TrackAlreadyExistsException in a
+com.stack....exceptions package and handled the exceptions
