@@ -22,11 +22,11 @@ public class MuzixServiceImpl implements MuzixService {
     //creating the track
     @Override
     public Muzix saveMuzix(Muzix muzix) {
-
+    //Saving it to the database
         return muzixRepository.save(muzix);
     }
 
-    //retrieving all the tracks
+    //retrieving all the tracks from database
     @Override
     public List<Muzix> getAllMuzics() {
         return muzixRepository.findAll();
@@ -43,7 +43,7 @@ public class MuzixServiceImpl implements MuzixService {
     @Override
     public Muzix updateMuzix(Muzix muzix) {
         Optional<Muzix> muzix1 = muzixRepository.findById(muzix.getId());
-
+        //Updating the track in the database
         if (muzix1.isPresent()) {
             Muzix newEntity = muzix1.get();
             newEntity.setId(muzix.getId());
@@ -53,7 +53,7 @@ public class MuzixServiceImpl implements MuzixService {
             return newEntity;
         } else {
             muzix = muzixRepository.save(muzix);
-
+        //Returining the updated database
             return muzix;
         }
     }
