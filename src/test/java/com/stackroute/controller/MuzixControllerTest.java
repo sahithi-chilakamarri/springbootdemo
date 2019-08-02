@@ -43,6 +43,7 @@ public class MuzixControllerTest {
    //Test case for the save track
    @Test
     public void testSaveTrack() throws Exception {
+        //creating muzix object
        Muzix muzix1=new Muzix(1,"Hello","Good");
        when(muzixService.saveTrack(any())).thenReturn(muzix1);
        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/muzix")
