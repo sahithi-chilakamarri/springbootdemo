@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 //Controller class
 public class MuzixController {
     //Creating object for the muzix service
-    MuzixService muzixService;
+   private MuzixService muzixService;
 
     //parameterized Constructor
     public MuzixController(MuzixService muzixService) {
