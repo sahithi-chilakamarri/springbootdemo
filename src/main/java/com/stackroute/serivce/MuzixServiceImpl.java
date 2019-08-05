@@ -12,7 +12,7 @@ import java.util.Optional;
 public class MuzixServiceImpl implements MuzixService {
     //Autowiring the muzix repository
     @Autowired
-    MuzixRepository muzixRepository;
+   private MuzixRepository muzixRepository;
 
     //constructor
     public MuzixServiceImpl(MuzixRepository muzixRepository) {
@@ -34,9 +34,8 @@ public class MuzixServiceImpl implements MuzixService {
 
     //Deleting the track
     @Override
-    public boolean deleteMuzix(int id) {
-        muzixRepository.deleteById(id);
-        return true;
+    public Muzix deleteMuzix(int id) {
+       return muzixRepository.deleteById(id);
     }
 
     //Updating the existing track
