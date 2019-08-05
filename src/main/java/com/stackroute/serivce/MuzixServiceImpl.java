@@ -20,7 +20,7 @@ import java.util.Optional;
 @PropertySource("application.properties")
 public class MuzixServiceImpl implements MuzixService, ApplicationListener<ContextRefreshedEvent>, CommandLineRunner {
     @Autowired
-    Environment environment;
+    private Environment environment;
     //Adding the default values to the database by using Application listener
     @Value("${muzix.1.id:default}")
     int id1;
@@ -48,7 +48,7 @@ public class MuzixServiceImpl implements MuzixService, ApplicationListener<Conte
     }
     //Autowiring the muzix repository
     @Autowired
-    MuzixRepository muzixRepository;
+   private MuzixRepository muzixRepository;
 
     //constructor
     public MuzixServiceImpl(MuzixRepository muzixRepository) {
@@ -79,8 +79,7 @@ public class MuzixServiceImpl implements MuzixService, ApplicationListener<Conte
         {
             throw new TrackNotFoundException("Track not found");
         }
-        muzixRepository.deleteById(id);
-        return true;
+        return muzixRepository.deleteById(id);
     }
     //Updating the existing track
     @Override
