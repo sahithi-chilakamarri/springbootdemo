@@ -12,7 +12,7 @@ import java.util.Optional;
 public class MuzixServiceImpl implements MuzixService {
     //Autowiring the muzix repository
     @Autowired
-    MuzixRepository muzixRepository;
+    private MuzixRepository muzixRepository;
 
     //constructor
     public MuzixServiceImpl(MuzixRepository muzixRepository) {
