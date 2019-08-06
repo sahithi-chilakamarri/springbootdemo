@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class MuzixController {
     //Creating object for the muzix service
    private MuzixService muzixService;
+   private ResponseEntity responseEntity;
 
     //parameterized Constructor
     public MuzixController(MuzixService muzixService) {
@@ -21,7 +22,6 @@ public class MuzixController {
     //Saving the track
     @PostMapping("muzix")
     public ResponseEntity<?> saveMuzix(@RequestBody Muzix muzix) {
-        ResponseEntity responseEntity;
         //calling the saveMuzix() in service
         try {
             muzixService.saveMuzix(muzix);
