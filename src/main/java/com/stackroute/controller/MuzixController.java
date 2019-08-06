@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class MuzixController {
     //Creating object for the muzix service
     private MuzixService muzixService;
-
+     private ResponseEntity responseEntity;
     //Constructor
     public MuzixController(MuzixService muzixService) {
         this.muzixService = muzixService;
@@ -23,7 +23,6 @@ public class MuzixController {
     //Saving the track
     @PostMapping("muzix")
     public ResponseEntity<?> saveMuzix(@RequestBody Muzix muzix) throws TrackAlreadyExistsException {
-        ResponseEntity responseEntity;
             muzixService.saveMuzix(muzix);
             responseEntity = new ResponseEntity("successfully created", HttpStatus.CREATED);
         return responseEntity;
