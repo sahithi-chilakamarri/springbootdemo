@@ -42,7 +42,7 @@ public class MuzixController {
 
         ResponseEntity responseEntity;
 
-            responseEntity=new ResponseEntity<Boolean>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
+            responseEntity=new ResponseEntity<>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
         return responseEntity;
 
     }
