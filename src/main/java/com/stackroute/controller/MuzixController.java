@@ -41,7 +41,7 @@ public class MuzixController {
     @DeleteMapping("muzix")
     public ResponseEntity<?> deleteMuzix(@RequestBody Muzix muzix) {
 
-        return new ResponseEntity<Boolean>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
+        return new ResponseEntity<>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
     }
 
     //Updiatng the track
