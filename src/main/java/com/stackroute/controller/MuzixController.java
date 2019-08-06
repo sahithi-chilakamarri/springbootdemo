@@ -17,7 +17,7 @@ import java.util.List;
 public class MuzixController {
     //Creating object for the muzix service
     private MuzixService muzixService;
-
+     private ResponseEntity responseEntity;
     //Parameterized Constructor
     public MuzixController(MuzixService muzixService) {
         this.muzixService = muzixService;
@@ -27,7 +27,6 @@ public class MuzixController {
     @PostMapping("muzix")
     //Handler method for savinvg the track
     public ResponseEntity<?> saveMuzix(@RequestBody Muzix muzix) throws TrackAlreadyExistsException {
-        ResponseEntity responseEntity;
         //Saving the track
         muzixService.saveTrack(muzix);
         //HttpStatus Code
