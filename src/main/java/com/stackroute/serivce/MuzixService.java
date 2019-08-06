@@ -10,7 +10,7 @@ public interface MuzixService {
 
     public List<Muzix> getAllMuzics();
 
-    public boolean deleteMuzix(int id);
+    public Muzix deleteMuzix(int id);
 
     public Muzix updateMuzix(Muzix muzix);
 
