@@ -46,7 +46,7 @@ public class MuzixController {
 
         ResponseEntity responseEntity;
         try {
-            responseEntity=new ResponseEntity<Boolean>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
+            responseEntity=new ResponseEntity<>(muzixService.deleteMuzix(muzix.getId()), HttpStatus.OK);
         }
         catch (TrackNotFoundException exception)
         {
